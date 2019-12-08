@@ -1,7 +1,7 @@
 import React from 'react';
 const MainPageComponent = () => {
     return(
-		<div className="main-page">
+		<div className="main-container">
 			<div className="banner">
 				<div className="greeting">
 					<b>WELCOME TO POESTRO!</b>
@@ -22,6 +22,52 @@ const MainPageComponent = () => {
 					</div>
 				</div>
         	</div>
+			<div className="main-container">
+                <div class="result-text">
+                    <h3><b>SOME OF THE USER'S RESULTS</b></h3>
+                </div>
+                <div className="result">
+					<span className="result-first">
+						<i className="fa fa-play"></i>
+						<p>SEEDS:</p>
+						<span className="seeds">веселий, милий, зелений</span>
+					</span>
+					<span className="date">(12.09.2019)</span>
+                </div>
+                <div className="result">
+					<span className="result-first">
+						<i className="fa fa-play"></i>
+						<p>SEEDS:</p>
+						<span className="seeds">подорож, природа</span>
+					</span>
+					<span className="date">(15.09.2019)</span>
+                </div>
+                <div className="result">
+					<span className="result-first">
+						<i className="fa fa-play"></i>
+						<p>SEEDS:</p>
+						<span className="seeds">сонце, печера</span>
+					</span>
+					<span className="date">(17.09.2019)</span>
+                </div>
+                <div class="poem">
+                    <p>Сонце він зірвати з листя
+                    <br/>
+                    У печері змін зреклися 
+                    <br/>
+                    Наймолодший дар в полоні  
+                    <br/>            
+                    Дух колодязь близько скроні</p>                
+                </div>
+				<div className="result">
+					<span className="result-first">
+						<i className="fa fa-play"></i>
+						<p>SEEDS:</p>
+						<span className="seeds">битва, меч, перемога</span>
+					</span>
+					<span className="date">(21.09.2019)</span>
+                </div>   
+          	</div>     
 		</div>
     )
 }

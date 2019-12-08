@@ -91,7 +91,16 @@ abbr,acronym { border:0;
     background-image: url(assets/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: scroll;
 }
+.main-container {
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  border: 0;
+  display: block;
+}
+
 header nav{
     /*background-color: #0c3640;*/
     background-image: linear-gradient(#0c3640, #17576e);
@@ -193,67 +202,95 @@ header nav .menu a:hover {
   margin-right: 5px;
 }
 
-.result {
+.result-text {
     color:  #96d9d9;
     font-size: 3rem;
     padding: 30px;
 }
 
-#first, #second, #third  {
-    width: 75%;
+.result  {
+    width: 70%;
     height: 70px;
-    color: var(--main-color);
-    background-color: rgba(211, 211, 211, 0.404);
-    align-items: left;
+    color: white;
+    background-color: rgba(150, 217, 217, 0.404);
+    margin-bottom: 3px;
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
 }
-#first :hover {
-    background-color: #96d9d9;
-    height: 70px;
+
+.result-first {
+  display: flex;
+  flex-direction: row;
 }
-#second :hover {
-    background-color: #96d9d9;
-    height: 70px;
-} 
-#third :hover {
+
+.result i{
+  margin-top: 2px;
+}
+
+.result p {
+  margin-left: 20px;
+}
+
+.seeds {
+  margin-left: 50px;
+  font-style: italic;
+}
+
+.result:hover {
     background-color: #96d9d9;
     height: 70px;
 }
 .poem {
-    width: 75%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     color: var(--main-color);
-    background-color: rgba(211, 211, 211, 0.404);
+    background-color: rgba(150, 217, 217, 0.404);
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column;    
+    padding: 0 20px;
+    margin-bottom: 3px;
 }
- #analyze img {
+#analyze .menu-icon {
     width: 200px;
+    height: 200px;
+    background-image: url(./assets/SearchSeach.png);
+    background-size: cover;
 }
-#generate img {
+#generate .menu-icon {
     width: 250px;
+    height: 250px;
+    background-image: url(./assets/Cogcog.png);
+    background-size: cover;
 }
-#analyze {
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-button {
     width: 400px;
     height: 400px;
     text-align: center;
     background-color: #1f6b7373;
-    float: left;
-    margin: 80px;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
-#generate {
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    background-color: #1f6b7373;
-    float: right;
-    margin: 80px;
-}
-h4 {
+.menu-button h4 {
     color:  #96d9d9;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 .poema {
     width: 35%;
@@ -295,7 +332,7 @@ button {
 
 .login_cont{
   position: absolute;
-  right: 0px;
+  right: 16px;
   top: 72px;
   background-color: rgba(9, 100, 116, 0.438);
   width: 270px;
