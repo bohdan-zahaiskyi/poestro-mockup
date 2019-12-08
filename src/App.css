@@ -1,3 +1,46 @@
+/*css reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+  margin:0;
+  padding:0;
+}
+html,body {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img { 
+  border:0;
+}
+input{
+  border:1px solid #b0b0b0;
+  padding:3px 5px 4px;
+  color:#979797;
+  width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;
+}
+/*=========================== end css reset ========================*/
+
 .App {
   text-align: center;
 }
@@ -31,3 +74,302 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Notable&display=swap');
+:root {
+    font-family: 'Montserrat', sans-serif;
+    --main-color: white;
+    --accent-color: lightblue;
+    scroll-behavior: smooth;
+}
+.main-page {
+    width: 100%;
+    height: 650px;
+    margin: 0;
+    border: 0;
+    display: block;
+    background-image: url(assets/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header nav{
+    /*background-color: #0c3640;*/
+    background-image: linear-gradient(#0c3640, #17576e);
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+}
+header nav .logo {
+    font-family: 'Notable';
+    font-size: 2rem;
+    color:#499da6;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    
+}
+header nav .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+header nav .menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 1px solid transparent;
+    padding: 5px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+header nav .menu a:hover {
+    border: 1px solid var(--accent-color);
+}
+.banner {
+    width: 98vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.greeting {
+    background-color: rgba(9, 100, 116, 0.438);
+    height: 10%;
+    max-width: 50%;
+    color: #96d9d9;
+    margin: auto;
+    margin-top: 35px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+.hydra {
+    color:  #96d9d9;
+    display: block;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 0px;
+    margin-left: 55px;
+    margin-bottom: 55px;
+}
+
+.hydra .h1 {
+  font-size: 4rem;
+}
+
+.hydra .h2 {
+  font-size: 3rem;
+}
+
+.hydra .h3 {
+    font-size: 2rem;
+}
+.hydra-middle {
+  margin-top: -6px;
+}
+.hydra-first {
+  margin-bottom: -10px;
+}
+
+.hydra-last {
+  margin-top: -12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.hydra-a {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.result {
+    color:  #96d9d9;
+    font-size: 3rem;
+    padding: 30px;
+}
+
+#first, #second, #third  {
+    width: 75%;
+    height: 70px;
+    color: var(--main-color);
+    background-color: rgba(211, 211, 211, 0.404);
+    align-items: left;
+}
+#first :hover {
+    background-color: #96d9d9;
+    height: 70px;
+}
+#second :hover {
+    background-color: #96d9d9;
+    height: 70px;
+} 
+#third :hover {
+    background-color: #96d9d9;
+    height: 70px;
+}
+.poem {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--main-color);
+    background-color: rgba(211, 211, 211, 0.404);
+    justify-content: center;
+    flex-direction: column;
+}
+ #analyze img {
+    width: 200px;
+}
+#generate img {
+    width: 250px;
+}
+#analyze {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-color: #1f6b7373;
+    float: left;
+    margin: 80px;
+}
+#generate {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-color: #1f6b7373;
+    float: right;
+    margin: 80px;
+}
+h4 {
+    color:  #96d9d9;
+    font-size: 2rem;
+}
+.poema {
+    width: 35%;
+    color: var(--main-color);
+    background-color: rgba(211, 211, 211, 0.404);
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-top: 30px;
+}
+.humor {
+    background-color:#1f6b7373 ;
+    color: #96d9d9;
+    width: 30%;
+    height: 50px;
+    text-align: justify;
+}
+label, .seed {
+    background-color:#1f6b7373 ;
+    color: #96d9d9;
+    width: 30%;
+    height: 80px;
+}
+button {
+    background-color: #1f6b7373;
+    color: #96d9d9;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+    width: 20%;
+}
+
+/*=======================login styles: --------------------------------*/
+
+.login_cont{
+  position: absolute;
+  right: 0px;
+  top: 72px;
+  background-color: rgba(9, 100, 116, 0.438);
+  width: 270px;
+  max-width: 300px;
+  padding: 0 20px 15px;
+}
+.login_form{
+  display: flex;
+  flex-direction: column;
+}
+.login_cont p{
+  margin-bottom: 5px;
+  color: white;
+}
+label input{
+  margin:0;
+  margin-right: 5px;
+}
+.login-button {
+  width: 40%;
+  background-color: #499da6;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 4px 16px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login_cont span {
+  color: white;
+  margin-left: 10px;
+}
+.login_cont hr {
+  margin-top: 15px;
+  background-color: white;
+  height: 1px;
+  border: none;
+}
+
+.login_cont a{
+  display: block;
+  color: white;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.field{
+  position: relative;
+}
+.login-input {
+  width: 100%;
+  max-width: 150px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  padding: 5px 18px 5px 15px;
+  margin-bottom: 10px;
+  /* Styles */
+  border: none; /* Remove the default border */
+  box-shadow:
+    inset 0 0 5px rgba(0,0,0,0.1),
+    inset 0 3px 2px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  background: #f9f9f9;
+  color: #777;
+  transition: color 0.3s ease-out;
+}
+
+  
+
+.w3-center{text-align:center!important;width:auto;}
