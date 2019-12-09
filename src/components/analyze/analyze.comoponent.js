@@ -1,31 +1,27 @@
 import React, {Component} from 'react';
+import './analyze.styles.css';
 
  class AnalyzeComponent extends Component {
     render() {
         return(
-            <div class="banner">
-                    <div class="gri">
-                        <div class="poema">
-                            <p>Мені однаково, чи буду
-                            Я жить в Україні, чи ні.</p>
-                        </div>
-                        <div class="humor">
-                            <label for="mood">Mood</label>
-                            <select name="Mood">
-                                <option value="sad">SAD</option>
-                                <option value="happy">HAPPY</option>
-                                <option value="angry">ANGRY</option>
-                            </select>
-                        </div>
-                        <div class="seed">
-                            SEEDS<textarea id="message" name="message" placeholder="однаково,чужина,неволя"></textarea>
-                        </div>
-                        <div id="analyze">
-                            <h4>ANALYZE</h4>
-                            <img src="../img/SearchSeach.png" alt="SearchSeach"/>
-                        </div>
+            <div className="generate-banner">
+                <textarea className="poema poema-an">
+                </textarea>
+                <div className="generate-panel generate-panel-an">
+                    <div class="humor">
+                        <label for="mood">Mood:</label>
+                        <input type="text"/>
                     </div>
-                </div>   
+                    <div id="seeds-an">
+                        <label>Seeds:</label>
+                        <textarea name="seeds-an" placeholder="однаково,чужина,неволя"></textarea>
+                    </div>
+                    <div className="generate-button" id="analyze-btn">
+                        <h4>ANALYZE</h4>
+                        <img />
+                    </div>
+                </div>
+            </div>   
         )
     }
  }

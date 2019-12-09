@@ -1,0 +1,68 @@
+
+.generate-button {
+    background-color:#1f6b7373 !important;
+}
+input, select, textarea {
+    background-color: rgba(200, 215, 229, 0.621);
+    border: none;
+    color: #333333;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+#metre select,
+#humor input {
+    width: 150px;
+}
+
+input{
+    height: 55%;
+}
+
+select {
+    height: 75%;
+}
+
+input[type='number'] {
+    max-width: 50px;
+    text-align: center;
+}
+
+#seeds {
+    height: 80px;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+#seeds textarea {
+    height: 60px;
+}
+.poema-container{
+    margin: 0 20px;
+}
+
+#generate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 82px;
+    width: 455px;
+    font-size: 2rem;
+}
+#generate i {
+    margin-left: 10px;
+}
+
+.generate-change {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.twoButtons {
+    display: flex;
+}
+
+.twoButtons div {
+    width: 50%;
+    margin-right: 1px;
+}

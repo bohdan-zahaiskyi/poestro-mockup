@@ -241,8 +241,7 @@ header nav .menu a:hover {
 }
 
 .result:hover {
-    background-color: #96d9d9;
-    height: 70px;
+  background-color: rgba(150, 217, 217, 0.604);
 }
 .poem {
     width: 70%;
@@ -257,17 +256,55 @@ header nav .menu a:hover {
     padding: 0 20px;
     margin-bottom: 3px;
 }
-#analyze .menu-icon {
+
+.poema {
+  width: 500px;
+  height: 315px;
+  color: black;
+  background-color: rgba(211, 211, 211, 0.804);
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 1.15rem;
+}
+
+#menu-analyze .menu-icon {
     width: 200px;
     height: 200px;
     background-image: url(./assets/SearchSeach.png);
     background-size: cover;
 }
-#generate .menu-icon {
+#menu-generate .menu-icon {
     width: 250px;
     height: 250px;
     background-image: url(./assets/Cogcog.png);
     background-size: cover;
+}
+
+.generate-banner {
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+}
+.generate-panel div,
+.generate-button,
+#word, #change {
+  width: 300px;
+  height: 50px;
+  /*background-color:#1f6b7373 ;*/
+  background-color: rgba(73, 157, 167, 0.503);
+  border: 3px solid rgba(62, 62, 62, 0.604);
+  margin-bottom: 2px;
+  color: #96d9d9;
+  display: flex;
+  font-size: 1.75rem;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu-container {
@@ -291,28 +328,6 @@ header nav .menu a:hover {
     color:  #96d9d9;
     font-size: 2.5rem;
     font-weight: 800;
-}
-.poema {
-    width: 35%;
-    color: var(--main-color);
-    background-color: rgba(211, 211, 211, 0.404);
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    padding-top: 30px;
-}
-.humor {
-    background-color:#1f6b7373 ;
-    color: #96d9d9;
-    width: 30%;
-    height: 50px;
-    text-align: justify;
-}
-label, .seed {
-    background-color:#1f6b7373 ;
-    color: #96d9d9;
-    width: 30%;
-    height: 80px;
 }
 button {
     background-color: #1f6b7373;
@@ -339,6 +354,13 @@ button {
   max-width: 300px;
   padding: 0 20px 15px;
 }
+
+.login_cont h4 {
+  color: #96d9d9;
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
 .login_form{
   display: flex;
   flex-direction: column;
@@ -406,7 +428,5 @@ label input{
   color: #777;
   transition: color 0.3s ease-out;
 }
-
-  
 
 .w3-center{text-align:center!important;width:auto;}

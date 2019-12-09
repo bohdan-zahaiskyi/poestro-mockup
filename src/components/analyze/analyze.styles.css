@@ -1,0 +1,43 @@
+.poema-an {
+    margin-right: 20px;
+    height: 400px;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.generate-panel-an {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.generate-panel-an div{
+    background-color: rgba(73, 157, 167, 0.603);
+}
+
+#seeds-an {
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+#seeds-an textarea {
+    height: 130px;
+    width: 180px;
+}
+
+#analyze-btn {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+#analyze-btn img {
+    background-image: url(../../assets/SearchSeach.png);
+    background-size: cover;
+    border: none;
+    height: 100px;
+    width: 100px;
+}
