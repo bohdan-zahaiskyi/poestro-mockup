@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import LoginComponent from '../login/login.component';
 
-export default function NavHeaderComponent() {
+export default function NavHeaderComponent(props) {
+    const [showLogin, setShowLogin] = useState(false);
+    const showLoginFunc = () => {
+        setShowLogin(!showLogin);
+    }
+
+    console.log("NavHeaderComponent props: ", props)
     return (
 		<header>
         <nav>
@@ -26,10 +33,11 @@ export default function NavHeaderComponent() {
                     <a href="#register">Register</a>
                 </li>
                 <li>
-                    <a href="#log in">LOG IN</a>
+                    <a href="#log in" onClick={showLoginFunc}>LOG IN</a>
                 </li>
             </ul>
         </nav>
+        { showLogin && <LoginComponent />}
     </header>
     );
 }

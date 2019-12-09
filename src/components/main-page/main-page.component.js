@@ -1,5 +1,10 @@
-import React from 'react';
-const MainPageComponent = () => {
+import React, {useEffect} from 'react';
+import historyService from '../../services/history.service';
+const MainPageComponent = (props) => {
+	console.log("HALT! mainPage props: ", props)
+	useEffect(() => {
+		historyService.setHistory(props.history)
+	})
     return(
 		<div className="main-container">
 			<div className="banner">
