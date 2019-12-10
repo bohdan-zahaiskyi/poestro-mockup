@@ -2,9 +2,22 @@ import React, {Component} from 'react';
 import './generate.styles.css';
 
  class GenerateComponent extends Component {
+    constructor() {
+        super();
+        this.state = {
+            showSpinner: false
+        }
+    }
+    baba = () => {
+        this.setState({
+            showSpinner: !this.state.showSpinner
+        })
+    }
     render() {
         return(
             <div>
+                            {this.state.showSpinner && <div id="ge-loader"/>}
+
             <div class="generate-banner">
                 <div className="generate-panel">
                     <div id="mode">
@@ -14,7 +27,7 @@ import './generate.styles.css';
                             <option value="ua">Step by step</option>
                         </select>
                     </div>
-                    <div id="lang">
+                    <div id="lang" onClick={this.baba}>
                         <label for="language">Language:</label>
                         <select name="Language">
                             <option value="ua">ua</option>

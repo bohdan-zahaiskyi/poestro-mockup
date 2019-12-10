@@ -8,7 +8,8 @@ import axios from 'axios';
         this.state = {
             text: '',
             moodAn: '',
-            seedsAn: ''
+            seedsAn: '',
+            showSpinner: false
         }
         this.sendToAnalyze = this.sendToAnalyze.bind(this)
     }
@@ -19,6 +20,9 @@ import axios from 'axios';
         });
     };
     sendToAnalyze = async function () {
+        this.setState({
+            showSpinner: true
+        })
         console.log("HALT! this.state", this.state)
         const headers = {
             'Content-Type': 'application/json'
@@ -33,11 +37,15 @@ import axios from 'axios';
             headers
         );
         console.log("HALT! response: ", response);
+        this.setState({
+            showSpinner: false
+        });
     }
 
     render() {
         return(
             <div className="generate-banner">
+                {this.state.showSpinner && <div id="an-loader"/>}
                 <textarea id="text" className="poema poema-an">
                 </textarea>
                 <div className="generate-panel generate-panel-an">

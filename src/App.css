@@ -137,6 +137,18 @@ header nav .menu a {
     margin-left: 10px;
 }
 
+#an-loader, #ge-loader {
+  position: absolute;
+  left: 250px;
+  top: 250px;
+  background-image: url(./assets/loading.gif);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+#ge-loader {
+  left: 600px;
+}
 header nav .menu a:hover {
     border: 1px solid var(--accent-color);
 }
