@@ -3,6 +3,8 @@ import LoginComponent from '../login/login.component';
 
 export default function NavHeaderComponent(props) {
     const [showLogin, setShowLogin] = useState(false);
+    const [loginText, setLoginText] = useState('LOG IN');
+
     const showLoginFunc = () => {
         setShowLogin(!showLogin);
     }
@@ -33,7 +35,7 @@ export default function NavHeaderComponent(props) {
                     <a href="#register">Register</a>
                 </li>
                 <li>
-                    <a href="#log in" onClick={showLoginFunc}>LOG IN</a>
+                    <a href="#log in" onClick={showLoginFunc}>{loginText}</a>
                 </li>
             </ul>
         </nav>

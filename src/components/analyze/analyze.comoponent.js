@@ -9,6 +9,7 @@ import axios from 'axios';
             text: '',
             moodAn: '',
             seedsAn: '',
+            noEmphasis: ['слово', 'другеслово'],
             showSpinner: false
         }
         this.sendToAnalyze = this.sendToAnalyze.bind(this)
@@ -41,16 +42,38 @@ import axios from 'axios';
             showSpinner: false
         });
     }
+    selectEmphasis = (e) => {
+        console.log("HALT! e.target: ", e.target);
+        e.target.className='emph-letter-an'
+        console.log("HALT! e.target: ", e.target);
+    }
 
     render() {
+        const words = [];
+        for(let value of this.state.noEmphasis) {
+            const letters = [];
+            for(let letter of value) {
+                letters.push(<span className="letter-an" onClick={this.selectEmphasis}>{letter}</span>)
+            }
+            words.push(<p className="word-an">{letters}</p>)
+        }
+
+        const noEmphasisDiv = this.state.noEmphasis.length ?(
+            <div id="noEmphWords" className="generate-panel">
+                <div>
+                    <p>Words with no emphasis</p>
+                    {words}
+                </div>
+            </div>
+        ) : false;
         return(
             <div className="generate-banner">
                 {this.state.showSpinner && <div id="an-loader"/>}
                 <textarea id="text" className="poema poema-an">
                 </textarea>
                 <div className="generate-panel generate-panel-an">
-                    <div class="humor">
-                        <label for="mood">Mood:</label>
+                    <div className="humor">
+                        <label>Mood:</label>
                         <input id="moodAn" type="text"/>
                     </div>
                     <div id="seeds-an">
@@ -62,6 +85,7 @@ import axios from 'axios';
                         <img />
                     </div>
                 </div>
+                {noEmphasisDiv}
             </div>   
         )
     }

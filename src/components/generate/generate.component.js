@@ -16,8 +16,7 @@ import './generate.styles.css';
     render() {
         return(
             <div>
-                            {this.state.showSpinner && <div id="ge-loader"/>}
-
+            {this.state.showSpinner && <div id="ge-loader"/>}
             <div class="generate-banner">
                 <div className="generate-panel">
                     <div id="mode">
